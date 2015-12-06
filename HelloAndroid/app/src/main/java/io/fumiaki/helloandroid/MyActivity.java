@@ -9,10 +9,12 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.ImageView;
 
 public class MyActivity extends AppCompatActivity {
 
     private Button buttonPushMe;
+    private ImageView imageAndroid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +32,20 @@ public class MyActivity extends AppCompatActivity {
             }
         });
 
+        // ボタン設定
         buttonPushMe = (Button) findViewById(R.id.btn_pushme);
+
+        // ボタンクリック時処理
         buttonPushMe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 buttonPushMe.setText("Pushed!!");
+                imageAndroid.setImageResource(R.drawable.droid2);
             }
         });
+
+        // 画像設定
+        imageAndroid = (ImageView) findViewById(R.id.iv_android);
     }
 
     @Override
