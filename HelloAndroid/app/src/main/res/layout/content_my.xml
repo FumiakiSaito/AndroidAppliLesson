@@ -19,6 +19,7 @@
         android:text="Hello Android!" />
 
     <Button
+        android:id="@+id/btn_pushme"
         android:text="Push Me!"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
